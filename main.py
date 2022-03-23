@@ -15,15 +15,20 @@ screen = pygame.display.set_mode(screen_size)
 # get current path for assets
 current_path = os.path.dirname(__file__)
 
-background = pygame.image.load(os.path.join(current_path, 'data/background.png'))
-spaceship = pygame.image.load(os.path.join(current_path, 'data/spaceship.png'))
-bullet = pygame.image.load(os.path.join(current_path, 'data/bullet.png'))
+background = pygame.image.load(os.path.join(current_path, 'data/background.png'screen.blit(planet_one, [140, 50])))
+spaceship = pygame.image.load(os.path.join(current_path, 'data/spaceship.png'# load spaceship
+spaceship = pygame.image.load('spaceship.png')
+
+# display spaceship inside game loop   
+screen.blit(spaceship, [160, 500])))
+bullet = pygame.image.load(os.path.join(current_path, 'data/bullet.png'))bullet = pygame.image.load('bullet.png')
+screen.blit(bullet, [180, 500])
 bullet_y = 500
 fired = False
 
 planets = [os.path.join(current_path, 'data/p_one.png'), os.path.join(current_path, 'data/p_two.png'),
            os.path.join(current_path, 'data/p_three.png')]
-p_index = 50
+p_index =0
 planet = pygame.image.load(planets[p_index])
 planet_x = 140
 move_direction = 'right'
