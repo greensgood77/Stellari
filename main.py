@@ -1,11 +1,11 @@
 import os
-
+import android module
 import pygame
 
 # Import the android module. If we can't import it, set it to None - this
 # lets us test it, and check to see if we want android-specific # behavior.
 try:
-    import android=none
+    import android module=
 except ImportError:
     android = None
 
@@ -23,7 +23,7 @@ fired = False
 
 planets = [os.path.join(current_path, 'data/p_one.png'), os.path.join(current_path, 'data/p_two.png'),
            os.path.join(current_path, 'data/p_three.png')]
-p_index = 0
+p_index = 50
 planet = pygame.image.load(planets[p_index])
 planet_x = 140
 move_direction = 'right'
