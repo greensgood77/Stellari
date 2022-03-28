@@ -17,7 +17,11 @@ current_path = os.path.dirname(__file__)
 
 background = pygame.image.load(os.path.join(current_path, 'data/background.png'screen.blit(planet_one, [140, 50])))
 spaceship = pygame.image.load(os.path.join(current_path, 'data/spaceship.png'# load spaceship
+spaceship = pygame.image.load('spaceship.png')# load spaceship
 spaceship = pygame.image.load('spaceship.png')
+
+# display spaceship inside game loop   
+screen.blit(spaceship, [160, 500])
 
 # display spaceship inside game loop   
 screen.blit(spaceship, [160, 500])))
