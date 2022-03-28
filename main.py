@@ -13,7 +13,8 @@ screen_size = [360, 600]
 screen = pygame.display.set_mode(screen_size)
 
 # get current path for assets
-current_path = os.path.dirname(__file__)
+current_path = os.path.dirname(__file__)bullet = pygame.image.load('bullet.png')
+screen.blit(bullet, [180, 500])
 
 background = pygame.image.load(os.path.join(current_path, 'data/background.png'screen.blit(planet_one, [140, 50])))
 spaceship = pygame.image.load(os.path.join(current_path, 'data/spaceship.png'# load spaceship
@@ -40,7 +41,9 @@ move_direction = 'right'
 keep_alive = True
 clock = pygame.time.Clock()
 
-while keep_alive:
+while keep_alive:if keys[pygame.K_SPACE] == True:
+   print('Space key pressed')
+
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             keep_alive = False
