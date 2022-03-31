@@ -26,7 +26,16 @@ screen.blit(spaceship, [160, 500])
 
 # display spaceship inside game loop   
 screen.blit(spaceship, [160, 500])))
-bullet = pygame.image.load(os.path.join(current_path, 'data/bullet.png'))bullet = pygame.image.load('bullet.png')
+bullet = pygame.image.load(os.path.join(current_path, 'data/bullet.png'))bullet = pygame.image.load('bullet.png')#previous planet display
+screen.blit(bullet, [180, 500])80#previous planet display
+screen.blit(bullet, [180, 500])
+#new planet display with dynamic position
+screen.blit(bullet, [180, bullet_y])
+
+#new planet display with dynamic position
+screen.blit(bullet, [180, bullet_y])if bullet_y < 80 and planet_x > 120 and planet_x < 180:
+       print('BOOM')
+
 screen.blit(bullet, [180, 500])
 bullet_y = 500
 fired = False
@@ -52,7 +61,11 @@ while keep_alive:if keys[pygame.K_SPACE] == True:
         elif event.type == pygame.K_SPACE or event.type == pygame.FINGERUP:
             fired = True
         else:
-            print(event.type)
+            print(event.type)#previous planet display
+screen.blit(planet, [140, 50])
+#new planet display with dynamic position
+screen.blit(planet, [planet_x, 50])
+
 
     if fired is True:
         bullet_y = bullet_y - 5
